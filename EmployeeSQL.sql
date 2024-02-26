@@ -7,12 +7,6 @@ CREATE TABLE IF NOT EXISTS public.titles
     CONSTRAINT titles_pkey PRIMARY KEY (title_id)
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.titles
-    OWNER to postgres;
-
-
 ------------------------------------------------------Create "salaries" table---------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS public.salaries
@@ -26,12 +20,6 @@ CREATE TABLE IF NOT EXISTS public.salaries
         ON DELETE NO ACTION
         NOT VALID
 )
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.salaries
-    OWNER to postgres;
-
 
 ------------------------------------------------------Create "employees" table---------------------------------------------------
 
@@ -52,12 +40,6 @@ CREATE TABLE IF NOT EXISTS public.employees
         NOT VALID
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.employees
-    OWNER to postgres;
-
-
 ------------------------------------------------------Create "dept_manager" table---------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS public.dept_manager
@@ -77,12 +59,6 @@ CREATE TABLE IF NOT EXISTS public.dept_manager
         NOT VALID
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.dept_manager
-    OWNER to postgres;
-
-
 ------------------------------------------------------Create "dept_emp" table---------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS public.dept_emp
@@ -101,12 +77,6 @@ CREATE TABLE IF NOT EXISTS public.dept_emp
         NOT VALID
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.dept_emp
-    OWNER to postgres;
-
-
 ------------------------------------------------------Create "departments" table---------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS public.departments
@@ -115,12 +85,6 @@ CREATE TABLE IF NOT EXISTS public.departments
     dept_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT departments_pkey PRIMARY KEY (dept_no)
 )
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.departments
-    OWNER to postgres;
-
 
 ------------------------------------------------------ DATA ANALYSIS ---------------------------------------------------
 
