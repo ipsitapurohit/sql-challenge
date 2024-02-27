@@ -65,6 +65,7 @@ CREATE TABLE IF NOT EXISTS public.dept_emp
 (
     emp_no bigint NOT NULL,
     dept_no character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT pk_dept_emp PRIMARY KEY (emp_no, dept_no),
     CONSTRAINT "fk_deptNo_departments" FOREIGN KEY (dept_no)
         REFERENCES public.departments (dept_no) MATCH SIMPLE
         ON UPDATE NO ACTION
